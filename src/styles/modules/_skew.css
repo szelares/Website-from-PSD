@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 10px;
+}
+.skewed {
+  width: 320px;
+  height: 300px;
+  transform: skewX(-25deg);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  background: #000;
+  
+}
+.skewed > img {
+  transform: skewX(25deg);
+  position: absolute;
+  top: -20px;
+  left: -180px;
+  opacity: .62;
+}

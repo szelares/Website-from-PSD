@@ -1,0 +1,37 @@
+.bg-triangle-wrapper {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: -10%;
+  left: 32%;
+  max-width: 68%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.black-triangle-down {
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 650px solid transparent;
+	border-right: 650px solid transparent;
+	border-top: 650px solid #171717;
+}
+
+.red-small-triangle {
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 90px solid $mainRed;
+	border-top: 90px solid transparent;
+	border-bottom: 90px solid transparent;
+  &__wrapper {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 40%;
+    left: 0;
+    max-width: 10%;
+    overflow: hidden;
+  }
+}

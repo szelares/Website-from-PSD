@@ -1,0 +1,35 @@
+.row {
+  max-width: 100%;
+  @mixin clearfix;
+
+  &--gutters {
+    margin-right: -65px;
+  }
+  &--gutters-small {
+    padding-left: 15px;
+  }
+
+  &--gutters > div {
+    padding-right: 65px;
+  }
+  &--gutters-small > div {
+    margin-left: -15px;
+  }
+
+  &__medium-6 {
+    display: block;
+    max-width: 50%;
+    float: left;
+  }
+
+  &__medium-6 > img {
+    transform: scale(0.95, 0.95);
+    margin-left: -50px;
+  }
+  &__medium-4 {
+    display: block;
+    max-width: 33.33%;
+    float: left;
+  }
+
+}

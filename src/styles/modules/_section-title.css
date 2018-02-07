@@ -1,0 +1,13 @@
+.section-title {
+  font-family: "PeaceSans", sans-serif;
+  font-size: 3.875rem;
+  margin: 0;
+  color: $titleGrey;
+  
+  &--center {
+    text-align: center;
+    padding-top: 5rem;
+    
+  }
+
+}

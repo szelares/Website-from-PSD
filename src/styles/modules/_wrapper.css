@@ -1,0 +1,12 @@
+.wrapper {
+  padding-left: 70px;
+  padding-right: 70px;
+  max-width: 1236px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  &--t-margin-large {
+    margin-top: 2rem;
+  }
+}
