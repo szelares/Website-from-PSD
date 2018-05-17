@@ -1,6 +1,6 @@
 .row {
   max-width: 100%;
-  @mixin clearfix;
+  @extend .clearfix;
 
   &--gutters {
     margin-right: -65px;

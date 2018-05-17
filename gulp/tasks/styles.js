@@ -1,18 +1,22 @@
-var gulp = require('gulp'),
-postcss = require('gulp-postcss'),
-autoprefixer = require('autoprefixer'),
-cssvars = require('postcss-simple-vars'),
-nested = require('postcss-nested'),
-cssImport = require('postcss-import'),
-mixins = require('postcss-mixins')
-hexrgba = require('postcss-hexrgba');
+var gulp, sass, sourcemaps, autoprefixer;
+gulp = require('gulp');
+sass = require('gulp-sass');
+sourcemaps = require('gulp-sourcemaps');
+autoprefixer = require('gulp-autoprefixer');
+
+
+var input = './src/styles/**/*scss';
+var output = './dist/styles/';
+var autoprefixerOptions = {
+    browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
 
 gulp.task('styles', () => {
-  return gulp.src('./src/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
-    .on('error', function(errorInfo) {
-      console.log(errorInfo.toString());
-      this.emit('end')
-    })
-    .pipe(gulp.dest('./src/temp/styles'));
+  return gulp
+      .src(input)
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(sourcemaps.write())
+      .pipe(autoprefixer(autoprefixerOptions))
+      .pipe(gulp.dest(output));
   });

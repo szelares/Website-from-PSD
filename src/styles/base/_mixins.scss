@@ -1,7 +1,7 @@
-@define-mixin clearfix {
-  &::after {
+.clearfix {
+  &:after {
     content: "";
     clear: both;
     display: table;
   }
-}
+};
